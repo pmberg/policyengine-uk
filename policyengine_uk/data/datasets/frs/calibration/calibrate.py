@@ -29,7 +29,7 @@ def generate_model_variables(dataset: str, time_period: str = "2023") -> Tuple:
         values_df (pd.DataFrame): A 2D array of values to transform household weights into statistical predictions.
         targets (dict): A dictionary of names and target values for the statistical predictions.
         targets_array (torch.Tensor): A 1D array of target values for the statistical predictions.
-        equivalisation_factors_array (dict): A 1D array of equivalisation factors for the statistical predictions to normalise the targets.
+        equivalisation_factors_array (torch.Tensor): A 1D array of equivalisation factors for the statistical predictions to normalise the targets.
     """
     simulation = Microsimulation(dataset=dataset)
     frs_simulation = Microsimulation(dataset="frs_2021")
